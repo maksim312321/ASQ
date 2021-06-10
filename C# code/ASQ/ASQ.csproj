@@ -52,10 +52,52 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Math.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Math.Designer.cs">
+      <DependentUpon>Math.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Physicscs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Physicscs.Designer.cs">
+      <DependentUpon>Physicscs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rus.Designer.cs">
+      <DependentUpon>Rus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentTests.Designer.cs">
+      <DependentUpon>StudentTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.Designer.cs">
+      <DependentUpon>Teacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Teacher2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher2.Designer.cs">
+      <DependentUpon>Teacher2.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Math.resx">
+      <DependentUpon>Math.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Physicscs.resx">
+      <DependentUpon>Physicscs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +108,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Rus.resx">
+      <DependentUpon>Rus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentTests.resx">
+      <DependentUpon>StudentTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.resx">
+      <DependentUpon>Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher2.resx">
+      <DependentUpon>Teacher2.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
