@@ -1,7 +1,7 @@
 ﻿
 namespace ASQ
 {
-    partial class Form1
+    partial class Start
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -30,8 +30,8 @@ namespace ASQ
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.teacher_btn = new System.Windows.Forms.Button();
+            this.student_btn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -46,27 +46,27 @@ namespace ASQ
             this.label1.Text = "ДОБРО ПОЖАЛОВАТЬ В ПРОГРАММУ ДЛЯ ПРОХОЖДЕНИЯ ТЕСТОВ!";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // teacher_btn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(111, 174);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 75);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Продолжить, как преподаватель";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.teacher_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.teacher_btn.Location = new System.Drawing.Point(111, 174);
+            this.teacher_btn.Name = "teacher_btn";
+            this.teacher_btn.Size = new System.Drawing.Size(211, 75);
+            this.teacher_btn.TabIndex = 1;
+            this.teacher_btn.Text = "Продолжить, как преподаватель";
+            this.teacher_btn.UseVisualStyleBackColor = true;
+            this.teacher_btn.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // button2
+            // student_btn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(450, 174);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 75);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Продолжить, как ученик";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.student_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.student_btn.Location = new System.Drawing.Point(450, 174);
+            this.student_btn.Name = "student_btn";
+            this.student_btn.Size = new System.Drawing.Size(211, 75);
+            this.student_btn.TabIndex = 2;
+            this.student_btn.Text = "Продолжить, как ученик";
+            this.student_btn.UseVisualStyleBackColor = true;
+            this.student_btn.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button3
             // 
@@ -78,17 +78,17 @@ namespace ASQ
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // Form1
+            // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 399);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.student_btn);
+            this.Controls.Add(this.teacher_btn);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Start";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -99,8 +99,8 @@ namespace ASQ
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button teacher_btn;
+        private System.Windows.Forms.Button student_btn;
         private System.Windows.Forms.Button button3;
     }
 }
