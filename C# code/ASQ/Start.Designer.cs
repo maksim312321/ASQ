@@ -78,17 +78,17 @@ namespace ASQ
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // Form1
+            // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 399);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.student_btn);
             this.Controls.Add(this.teacher_btn);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Start";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
