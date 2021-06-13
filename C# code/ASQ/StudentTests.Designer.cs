@@ -70,6 +70,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.radioButton1.Location = new System.Drawing.Point(150, 158);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(107, 20);
@@ -110,6 +111,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Начать прохождение теста";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -119,6 +121,7 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "ВЫХОД";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // StudentTests
             // 

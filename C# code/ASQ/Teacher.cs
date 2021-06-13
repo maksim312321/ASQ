@@ -16,6 +16,7 @@ namespace ASQ
         public Teacher()
         {
             InitializeComponent();
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -42,12 +43,30 @@ namespace ASQ
 
             if(table.Rows.Count > 0)//если нашли больше, чем 0 записей совпадающих, то пользователь авторизован
             {
-                MessageBox.Show("Yes");
+                Teacher2 newForm = new Teacher2();
+                newForm.Show();
             }
             else
             {
-                MessageBox.Show("No");
+                MessageBox.Show("Вы ввели неверный логин или пароль, повторите попытку.");
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult ExitAnswer = MessageBox.Show("Вы действительно хотите завершить работу?",
+                    "Завершение работы", MessageBoxButtons.YesNo);
+
+            if (ExitAnswer == DialogResult.Yes) //Если нажата “Да”
+                Application.Exit(); // Закрыть приложение
+            else
+                MessageBox.Show("Мы благодарны Вам, за то, что Вы выбрали работу с нашим приложением.");
+
+        }
+
+        private void passField_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

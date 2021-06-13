@@ -73,8 +73,10 @@
             this.passField.Location = new System.Drawing.Point(186, 153);
             this.passField.Multiline = true;
             this.passField.Name = "passField";
+            this.passField.PasswordChar = '*';
             this.passField.Size = new System.Drawing.Size(138, 30);
             this.passField.TabIndex = 3;
+            this.passField.TextChanged += new System.EventHandler(this.passField_TextChanged);
             // 
             // label3
             // 
@@ -104,6 +106,7 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "ВЫХОД";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Teacher
             // 

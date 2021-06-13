@@ -29,6 +29,13 @@ namespace ASQ
 
         private void Button3_Click(object sender, EventArgs e)
         {
+            DialogResult ExitAnswer = MessageBox.Show("Вы действительно хотите завершить работу?",
+                    "Завершение работы", MessageBoxButtons.YesNo);
+
+            if (ExitAnswer == DialogResult.Yes) //Если нажата “Да”
+                Application.Exit(); // Закрыть приложение
+            else
+                MessageBox.Show("Мы благодарны Вам, за то, что Вы выбрали работу с нашим приложением.");
 
         }
 
