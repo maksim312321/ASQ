@@ -111,6 +111,9 @@
     <Compile Include="Teacher2.Designer.cs">
       <DependentUpon>Teacher2.cs</DependentUpon>
     </Compile>
+    <Compile Include="yt_Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Start.resx">
       <DependentUpon>Start.cs</DependentUpon>
     </EmbeddedResource>

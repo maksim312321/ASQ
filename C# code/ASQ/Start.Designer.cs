@@ -29,79 +29,71 @@ namespace ASQ
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.teacher_btn = new System.Windows.Forms.Button();
-            this.student_btn = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
             this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(35, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(703, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ДОБРО ПОЖАЛОВАТЬ В ПРОГРАММУ ДЛЯ ПРОХОЖДЕНИЯ ТЕСТОВ!";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // teacher_btn
-            // 
-            this.teacher_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.teacher_btn.Location = new System.Drawing.Point(111, 174);
-            this.teacher_btn.Name = "teacher_btn";
-            this.teacher_btn.Size = new System.Drawing.Size(211, 75);
-            this.teacher_btn.TabIndex = 1;
-            this.teacher_btn.Text = "Продолжить, как преподаватель";
-            this.teacher_btn.UseVisualStyleBackColor = true;
-            this.teacher_btn.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // student_btn
-            // 
-            this.student_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.student_btn.Location = new System.Drawing.Point(450, 174);
-            this.student_btn.Name = "student_btn";
-            this.student_btn.Size = new System.Drawing.Size(211, 75);
-            this.student_btn.TabIndex = 2;
-            this.student_btn.Text = "Продолжить, как ученик";
-            this.student_btn.UseVisualStyleBackColor = true;
-            this.student_btn.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(642, 343);
+            this.button3.BackColor = System.Drawing.Color.MediumOrchid;
+            this.button3.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Location = new System.Drawing.Point(22, 512);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(146, 37);
             this.button3.TabIndex = 3;
             this.button3.Text = "ВЫХОД";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumOrchid;
+            this.button1.Font = new System.Drawing.Font("Book Antiqua", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(132, 165);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(365, 87);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Продолжить, как преподаватель";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.MediumOrchid;
+            this.button2.Font = new System.Drawing.Font("Book Antiqua", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Location = new System.Drawing.Point(132, 308);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(365, 87);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Продолжить, как ученик";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 399);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1000, 561);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.student_btn);
-            this.Controls.Add(this.teacher_btn);
-            this.Controls.Add(this.label1);
             this.Name = "Start";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button teacher_btn;
-        private System.Windows.Forms.Button student_btn;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
