@@ -50,11 +50,11 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.BackColor = System.Drawing.Color.MediumOrchid;
-            this.radioButton1.Font = new System.Drawing.Font("Book Antiqua", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton1.Font = new System.Drawing.Font("Book Antiqua", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton1.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton1.Location = new System.Drawing.Point(380, 200);
+            this.radioButton1.Location = new System.Drawing.Point(213, 235);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(154, 27);
+            this.radioButton1.Size = new System.Drawing.Size(170, 29);
             this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Математика";
@@ -64,11 +64,11 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.BackColor = System.Drawing.Color.MediumOrchid;
-            this.radioButton2.Font = new System.Drawing.Font("Book Antiqua", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton2.Font = new System.Drawing.Font("Book Antiqua", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton2.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton2.Location = new System.Drawing.Point(380, 244);
+            this.radioButton2.Location = new System.Drawing.Point(426, 235);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(149, 27);
+            this.radioButton2.Size = new System.Drawing.Size(163, 29);
             this.radioButton2.TabIndex = 4;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Русский язык";
@@ -78,11 +78,11 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.BackColor = System.Drawing.Color.MediumOrchid;
-            this.radioButton3.Font = new System.Drawing.Font("Book Antiqua", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton3.Font = new System.Drawing.Font("Book Antiqua", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton3.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton3.Location = new System.Drawing.Point(380, 287);
+            this.radioButton3.Location = new System.Drawing.Point(638, 235);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(98, 27);
+            this.radioButton3.Size = new System.Drawing.Size(105, 29);
             this.radioButton3.TabIndex = 5;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Физика";
@@ -93,7 +93,7 @@
             this.button1.BackColor = System.Drawing.Color.MediumOrchid;
             this.button1.Font = new System.Drawing.Font("Book Antiqua", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(326, 357);
+            this.button1.Location = new System.Drawing.Point(317, 333);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(333, 68);
             this.button1.TabIndex = 6;
