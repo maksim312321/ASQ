@@ -21,5 +21,10 @@ namespace ASQ
         {
 
         }
+
+        private void StudentTests_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
