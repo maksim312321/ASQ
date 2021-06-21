@@ -56,5 +56,10 @@ namespace ASQ
         {
             this.Close();
         }
+
+        private void Teacher_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

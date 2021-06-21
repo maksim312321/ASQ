@@ -12,7 +12,8 @@ namespace ASQ
 {
     public partial class Rus : Form
     {
-        public Rus()
+        
+        public Rus(int id)
         {
             InitializeComponent();
         }
@@ -20,6 +21,11 @@ namespace ASQ
         private void Rus_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

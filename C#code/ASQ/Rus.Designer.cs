@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.close = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // close
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(163, 387);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 25);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Закончить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.close.Location = new System.Drawing.Point(163, 387);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(107, 25);
+            this.close.TabIndex = 3;
+            this.close.Text = "Закончить";
+            this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // label1
             // 
@@ -57,7 +58,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(417, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.label1);
             this.Name = "Rus";
             this.Text = "Rus";
@@ -69,7 +70,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button close;
         private System.Windows.Forms.Label label1;
     }
 }

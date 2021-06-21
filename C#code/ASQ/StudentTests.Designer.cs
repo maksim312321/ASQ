@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentTests));
             this.name = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.math = new System.Windows.Forms.RadioButton();
+            this.rus = new System.Windows.Forms.RadioButton();
+            this.physics = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.buttonNameConf = new System.Windows.Forms.Button();
@@ -49,47 +49,47 @@
             this.name.Size = new System.Drawing.Size(297, 42);
             this.name.TabIndex = 0;
             // 
-            // radioButton1
+            // math
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.MediumOrchid;
-            this.radioButton1.Font = new System.Drawing.Font("Book Antiqua", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton1.Location = new System.Drawing.Point(67, 53);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(170, 29);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Математика";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.math.AutoSize = true;
+            this.math.BackColor = System.Drawing.Color.MediumOrchid;
+            this.math.Font = new System.Drawing.Font("Book Antiqua", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.math.ForeColor = System.Drawing.SystemColors.Control;
+            this.math.Location = new System.Drawing.Point(67, 53);
+            this.math.Name = "math";
+            this.math.Size = new System.Drawing.Size(170, 29);
+            this.math.TabIndex = 3;
+            this.math.TabStop = true;
+            this.math.Text = "Математика";
+            this.math.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // rus
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.MediumOrchid;
-            this.radioButton2.Font = new System.Drawing.Font("Book Antiqua", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton2.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton2.Location = new System.Drawing.Point(295, 53);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(163, 29);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Русский язык";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.rus.AutoSize = true;
+            this.rus.BackColor = System.Drawing.Color.MediumOrchid;
+            this.rus.Font = new System.Drawing.Font("Book Antiqua", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rus.ForeColor = System.Drawing.SystemColors.Control;
+            this.rus.Location = new System.Drawing.Point(295, 53);
+            this.rus.Name = "rus";
+            this.rus.Size = new System.Drawing.Size(163, 29);
+            this.rus.TabIndex = 4;
+            this.rus.TabStop = true;
+            this.rus.Text = "Русский язык";
+            this.rus.UseVisualStyleBackColor = false;
             // 
-            // radioButton3
+            // physics
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.BackColor = System.Drawing.Color.MediumOrchid;
-            this.radioButton3.Font = new System.Drawing.Font("Book Antiqua", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton3.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton3.Location = new System.Drawing.Point(525, 53);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(105, 29);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Физика";
-            this.radioButton3.UseVisualStyleBackColor = false;
+            this.physics.AutoSize = true;
+            this.physics.BackColor = System.Drawing.Color.MediumOrchid;
+            this.physics.Font = new System.Drawing.Font("Book Antiqua", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.physics.ForeColor = System.Drawing.SystemColors.Control;
+            this.physics.Location = new System.Drawing.Point(525, 53);
+            this.physics.Name = "physics";
+            this.physics.Size = new System.Drawing.Size(105, 29);
+            this.physics.TabIndex = 5;
+            this.physics.TabStop = true;
+            this.physics.Text = "Физика";
+            this.physics.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -102,6 +102,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Начать прохождение теста";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -131,10 +132,10 @@
             // 
             // grouptest
             // 
-            this.grouptest.Controls.Add(this.radioButton1);
-            this.grouptest.Controls.Add(this.radioButton2);
+            this.grouptest.Controls.Add(this.math);
+            this.grouptest.Controls.Add(this.rus);
             this.grouptest.Controls.Add(this.button1);
-            this.grouptest.Controls.Add(this.radioButton3);
+            this.grouptest.Controls.Add(this.physics);
             this.grouptest.ForeColor = System.Drawing.Color.White;
             this.grouptest.Location = new System.Drawing.Point(120, 182);
             this.grouptest.Name = "grouptest";
@@ -167,9 +168,9 @@
         #endregion
 
         private System.Windows.Forms.TextBox name;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton math;
+        private System.Windows.Forms.RadioButton rus;
+        private System.Windows.Forms.RadioButton physics;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button buttonNameConf;

@@ -92,6 +92,7 @@
             this.Controls.Add(this.loginField);
             this.Name = "Teacher";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Teacher_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

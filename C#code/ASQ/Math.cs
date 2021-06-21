@@ -12,9 +12,19 @@ namespace ASQ
 {
     public partial class Math : Form
     {
-        public Math()
+        public Math(int id)
         {
             InitializeComponent();
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Math_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

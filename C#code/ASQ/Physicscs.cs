@@ -12,9 +12,19 @@ namespace ASQ
 {
     public partial class Physicscs : Form
     {
-        public Physicscs()
+        public Physicscs(int id)
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Physicscs_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
