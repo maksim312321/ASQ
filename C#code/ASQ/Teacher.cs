@@ -42,12 +42,19 @@ namespace ASQ
 
             if(table.Rows.Count > 0)//если нашли больше, чем 0 записей совпадающих, то пользователь авторизован
             {
-                MessageBox.Show("Yes");
+                Teacher2 results = new Teacher2();
+                results.Show();
+                this.Close();
             }
             else
             {
-                MessageBox.Show("No");
+                MessageBox.Show("Неверный логин или пароль");
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -29,19 +29,7 @@ namespace ASQ
 
         private void Button3_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            Teacher newForm = new Teacher();
-            newForm.Show();
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            StudentTests newForm = new StudentTests();
-            newForm.Show();
+            Close();
         }
 
         private void Yt_Button2_Click(object sender, EventArgs e)
@@ -51,7 +39,14 @@ namespace ASQ
 
         private void Button1_Click_1(object sender, EventArgs e)
         {
+            Teacher newForm = new Teacher();
+            newForm.Show();
+        }
 
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            StudentTests newForm = new StudentTests();
+            newForm.Show();
         }
     }
 }

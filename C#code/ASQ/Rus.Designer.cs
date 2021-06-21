@@ -61,6 +61,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Rus";
             this.Text = "Rus";
+            this.Load += new System.EventHandler(this.Rus_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

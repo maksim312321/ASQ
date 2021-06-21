@@ -16,5 +16,10 @@ namespace ASQ
         {
             InitializeComponent();
         }
+
+        private void Rus_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

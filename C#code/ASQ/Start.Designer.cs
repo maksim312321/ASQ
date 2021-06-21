@@ -31,7 +31,7 @@ namespace ASQ
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
             this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -48,18 +48,18 @@ namespace ASQ
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // button1
+            // button
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumOrchid;
-            this.button1.Font = new System.Drawing.Font("Book Antiqua", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(132, 165);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(365, 87);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Продолжить, как преподаватель";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
+            this.button.BackColor = System.Drawing.Color.MediumOrchid;
+            this.button.Font = new System.Drawing.Font("Book Antiqua", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button.Location = new System.Drawing.Point(132, 165);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(365, 87);
+            this.button.TabIndex = 4;
+            this.button.Text = "Продолжить, как преподаватель";
+            this.button.UseVisualStyleBackColor = false;
+            this.button.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // button2
             // 
@@ -72,6 +72,7 @@ namespace ASQ
             this.button2.TabIndex = 5;
             this.button2.Text = "Продолжить, как ученик";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Start
             // 
@@ -81,7 +82,7 @@ namespace ASQ
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1000, 561);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button);
             this.Controls.Add(this.button3);
             this.Name = "Start";
             this.Text = "Form1";
@@ -92,7 +93,7 @@ namespace ASQ
 
         #endregion
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button;
         private System.Windows.Forms.Button button2;
     }
 }
