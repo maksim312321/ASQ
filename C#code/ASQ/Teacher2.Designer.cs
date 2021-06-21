@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Teacher2));
             this.button3 = new System.Windows.Forms.Button();
+            this.resultsTable = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.resultsTable)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -45,20 +47,32 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // resultsTable
+            // 
+            this.resultsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.resultsTable.Location = new System.Drawing.Point(114, 222);
+            this.resultsTable.Name = "resultsTable";
+            this.resultsTable.Size = new System.Drawing.Size(660, 175);
+            this.resultsTable.TabIndex = 5;
+            // 
             // Teacher2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(893, 560);
+            this.Controls.Add(this.resultsTable);
             this.Controls.Add(this.button3);
             this.Name = "Teacher2";
             this.Text = "Teacher2";
+            this.Load += new System.EventHandler(this.Teacher2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.resultsTable)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView resultsTable;
     }
 }
