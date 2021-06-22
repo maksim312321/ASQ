@@ -13,7 +13,7 @@ namespace ASQ
     public partial class Rus : Form
     {
         
-        public Rus(int id)
+        public Rus()
         {
             InitializeComponent();
         }

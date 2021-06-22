@@ -109,11 +109,11 @@
             this.button3.BackColor = System.Drawing.Color.MediumOrchid;
             this.button3.Font = new System.Drawing.Font("Book Antiqua", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(751, 463);
+            this.button3.Location = new System.Drawing.Point(609, 463);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(153, 37);
+            this.button3.Size = new System.Drawing.Size(295, 37);
             this.button3.TabIndex = 7;
-            this.button3.Text = "ВЕРНУТЬСЯ";
+            this.button3.Text = "Завершить тестирование";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 

@@ -12,7 +12,7 @@ namespace ASQ
 {
     public partial class Physicscs : Form
     {
-        public Physicscs(int id)
+        public Physicscs()
         {
             InitializeComponent();
         }
