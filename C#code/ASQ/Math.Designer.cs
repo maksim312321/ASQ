@@ -90,11 +90,11 @@
             // Question
             // 
             this.Question.AutoSize = true;
-            this.Question.Location = new System.Drawing.Point(24, 161);
+            this.Question.Location = new System.Drawing.Point(23, 138);
             this.Question.Name = "Question";
-            this.Question.Size = new System.Drawing.Size(35, 13);
+            this.Question.Size = new System.Drawing.Size(0, 13);
             this.Question.TabIndex = 6;
-            this.Question.Text = "label3";
+            this.Question.Click += new System.EventHandler(this.Question_Click);
             // 
             // mathQuestion
             // 

@@ -18,12 +18,14 @@ namespace ASQ
         {
             InitializeComponent();
             mathQuestion.Hide();
+            Question.MaximumSize = new Size(800, 100);
         }
 
         private void close_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
         int i = 0;
         int quesId; //id текущего вопроса
         DB db = new DB();
@@ -33,7 +35,6 @@ namespace ASQ
             
             DataTable math = new DataTable();
             MySqlCommand command = new MySqlCommand("SELECT id,question FROM `question` WHERE id_subject = 1", db.GetConnection());
-            //command.Parameters.Add("@username", MySqlDbType.VarChar).Value = name.Text;
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             adapter.SelectCommand = command;//выбираем команду
             adapter.Fill(math);
@@ -50,26 +51,6 @@ namespace ASQ
             {
                 MessageBox.Show("Пользователь не зарегистрирован!");
             }
-
-            //MySqlCommand command_idUser = new MySqlCommand("SELECT id FROM `users` WHERE user_name = @un", db.GetConnection());
-            ////заглушки для безопасности
-            ////command_idUser.Parameters.Add("@un", MySqlDbType.VarChar).Value = name.Text;//инициализация зашлушки
-            //MySqlDataAdapter adapter_idUser = new MySqlDataAdapter();
-            //DataTable idUser = new DataTable();
-            //adapter_idUser.SelectCommand = command_idUser;//выбираем команду
-            //adapter_idUser.Fill(idUser);
-
-            //if (idUser.Rows.Count > 0)//если нашли больше, чем 0 записей совпадающих, то пользователь авторизован
-            //{
-            //    //id = Convert.ToInt32(idUser.Rows[0][0]);
-            //    //MessageBox.Show(Convert.ToString(id));
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Ошибка поиска id текущего пользователя");
-            //}
-
-
             db.closeConnection();// закрываем соединение к бд
         }
 
@@ -127,6 +108,11 @@ namespace ASQ
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Question_Click(object sender, EventArgs e)
         {
 
         }
