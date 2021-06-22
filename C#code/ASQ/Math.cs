@@ -54,49 +54,46 @@ namespace ASQ
 
         private void MathReady_Click(object sender, EventArgs e)
         {
-            
-            if( i == 3)
-            {
-                MathReady.Enabled = false;
-                MessageBox.Show("Спасибо за прохождение теста по математике. Можете переходить к следующему тесту или закончить работу с программой.");
-            }
-            else
-            {
-                db.openConnection();//открываем соединение к бд
-                MySqlCommand command = new MySqlCommand("INSERT INTO `results`(`id`,`user_id`,`question_id`,`user_answer`) VALUES (NULL,@userid,@quesId,@userAnswer)", db.GetConnection());
-                command.Parameters.Add("@userAnswer", MySqlDbType.VarChar).Value = MathInput.Text;
-                MathInput.Text = "";
-                command.Parameters.Add("@userid", MySqlDbType.VarChar).Value = StudentTests.id;
-                command.Parameters.Add("@quesId", MySqlDbType.VarChar).Value = quesId;
+            db.openConnection();//открываем соединение к бд
+            MySqlCommand command = new MySqlCommand("INSERT INTO `results`(`id`,`user_id`,`question_id`,`user_answer`) VALUES (NULL,@userid,@quesId,@userAnswer)", db.GetConnection());
+            command.Parameters.Add("@userAnswer", MySqlDbType.VarChar).Value = MathInput.Text;
+            MathInput.Text = "";
+            command.Parameters.Add("@userid", MySqlDbType.VarChar).Value = StudentTests.id;
+            command.Parameters.Add("@quesId", MySqlDbType.VarChar).Value = quesId;
 
 
-                if (command.ExecuteNonQuery() == 1)
+            if (command.ExecuteNonQuery() == 1)
+            {
+                DataTable math = new DataTable();
+                MySqlCommand command1 = new MySqlCommand("SELECT id,question FROM `question` WHERE id_subject = 1", db.GetConnection());
+                //command.Parameters.Add("@username", MySqlDbType.VarChar).Value = name.Text;
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                adapter.SelectCommand = command1;//выбираем команду
+                adapter.Fill(math);
+
+                if (math.Rows.Count > 0)//если нашли больше, чем 0 записей совпадающих, то пользователь авторизован
                 {
-                    DataTable math = new DataTable();
-                    MySqlCommand command1 = new MySqlCommand("SELECT id,question FROM `question` WHERE id_subject = 1", db.GetConnection());
-                    //command.Parameters.Add("@username", MySqlDbType.VarChar).Value = name.Text;
-                    MySqlDataAdapter adapter = new MySqlDataAdapter();
-                    adapter.SelectCommand = command1;//выбираем команду
-                    adapter.Fill(math);
-
-                    if (math.Rows.Count > 0)//если нашли больше, чем 0 записей совпадающих, то пользователь авторизован
-                    {
-                        mathQuestion.DataSource = math;
-                        Question.Text = Convert.ToString(mathQuestion.Rows[i].Cells[1].Value);
-                        quesId = Convert.ToInt32(mathQuestion.Rows[i].Cells[0].Value);
-                        i++;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Пользователь не зарегистрирован!");
-                    }
-
+                    mathQuestion.DataSource = math;
+                    Question.Text = Convert.ToString(mathQuestion.Rows[i].Cells[1].Value);
+                    quesId = Convert.ToInt32(mathQuestion.Rows[i].Cells[0].Value);
+                    i++;
                 }
                 else
                 {
                     MessageBox.Show("Пользователь не зарегистрирован!");
                 }
-                db.closeConnection();//открываем соединение к бд
+
+            }
+            else
+            {
+                MessageBox.Show("Пользователь не зарегистрирован!");
+            }
+            db.closeConnection();//открываем соединение к бд
+
+            if (i == 4)
+            {
+                MathReady.Enabled = false;
+                MessageBox.Show("Спасибо за прохождение теста по математике. Можете переходить к следующему тесту или закончить работу с программой.");
             }
         }
 

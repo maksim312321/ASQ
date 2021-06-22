@@ -17,6 +17,9 @@ namespace ASQ
         public Teacher2()
         {
             InitializeComponent();
+            resultsTable.ReadOnly = true;
+            resultsTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -36,7 +39,7 @@ namespace ASQ
             DB db = new DB();
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT users.user_name, results.user_answer, question.question, question.correct_answer FROM `results`, `question`, `users`", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("SELECT users.user_name AS NAME, results.user_answer AS USER_ANSWER,question.question AS QUESTION,question.correct_answer AS CORRECT_ANSWER FROM `results`, `question`, `users` WHERE results.user_id = users.id AND results.question_id = question.id ORDER BY users.id", db.GetConnection());
 
             adapter.SelectCommand = command;//выбираем команду           
             adapter.Fill(table);

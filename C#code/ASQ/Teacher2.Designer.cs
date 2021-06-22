@@ -50,9 +50,9 @@
             // resultsTable
             // 
             this.resultsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.resultsTable.Location = new System.Drawing.Point(114, 222);
+            this.resultsTable.Location = new System.Drawing.Point(12, 116);
             this.resultsTable.Name = "resultsTable";
-            this.resultsTable.Size = new System.Drawing.Size(660, 175);
+            this.resultsTable.Size = new System.Drawing.Size(869, 372);
             this.resultsTable.TabIndex = 5;
             // 
             // Teacher2

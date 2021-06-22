@@ -56,48 +56,46 @@ namespace ASQ
 
         private void RusReady_Click(object sender, EventArgs e)
         {
-            if (i == 3)
-            {
-                RusReady.Enabled = false;
-                MessageBox.Show("Спасибо за прохождение теста по русскому. Можете переходить к следующему тесту или закончить работу с программой.");
-            }
-            else
-            {
-                db.openConnection();//открываем соединение к бд
-                MySqlCommand command = new MySqlCommand("INSERT INTO `results`(`id`,`user_id`,`question_id`,`user_answer`) VALUES (NULL,@userid,@quesId,@userAnswer)", db.GetConnection());
-                command.Parameters.Add("@userAnswer", MySqlDbType.VarChar).Value = RusInput.Text;
-                RusInput.Text = "";
-                command.Parameters.Add("@userid", MySqlDbType.VarChar).Value = StudentTests.id;
-                command.Parameters.Add("@quesId", MySqlDbType.VarChar).Value = quesId;
+            db.openConnection();//открываем соединение к бд
+            MySqlCommand command = new MySqlCommand("INSERT INTO `results`(`id`,`user_id`,`question_id`,`user_answer`) VALUES (NULL,@userid,@quesId,@userAnswer)", db.GetConnection());
+            command.Parameters.Add("@userAnswer", MySqlDbType.VarChar).Value = RusInput.Text;
+            RusInput.Text = "";
+            command.Parameters.Add("@userid", MySqlDbType.VarChar).Value = StudentTests.id;
+            command.Parameters.Add("@quesId", MySqlDbType.VarChar).Value = quesId;
 
 
-                if (command.ExecuteNonQuery() == 1)
+            if (command.ExecuteNonQuery() == 1)
+            {
+                DataTable rus = new DataTable();
+                MySqlCommand command1 = new MySqlCommand("SELECT id,question FROM `question` WHERE id_subject = 2", db.GetConnection());
+                //command.Parameters.Add("@username", MySqlDbType.VarChar).Value = name.Text;
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                adapter.SelectCommand = command1;//выбираем команду
+                adapter.Fill(rus);
+
+                if (rus.Rows.Count > 0)//если нашли больше, чем 0 записей совпадающих, то пользователь авторизован
                 {
-                    DataTable rus = new DataTable();
-                    MySqlCommand command1 = new MySqlCommand("SELECT id,question FROM `question` WHERE id_subject = 2", db.GetConnection());
-                    //command.Parameters.Add("@username", MySqlDbType.VarChar).Value = name.Text;
-                    MySqlDataAdapter adapter = new MySqlDataAdapter();
-                    adapter.SelectCommand = command1;//выбираем команду
-                    adapter.Fill(rus);
-
-                    if (rus.Rows.Count > 0)//если нашли больше, чем 0 записей совпадающих, то пользователь авторизован
-                    {
-                        rusQuestion.DataSource = rus;
-                        Question.Text = Convert.ToString(rusQuestion.Rows[i].Cells[1].Value);
-                        quesId = Convert.ToInt32(rusQuestion.Rows[i].Cells[0].Value);
-                        i++;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Пользователь не зарегистрирован!");
-                    }
-
+                    rusQuestion.DataSource = rus;
+                    Question.Text = Convert.ToString(rusQuestion.Rows[i].Cells[1].Value);
+                    quesId = Convert.ToInt32(rusQuestion.Rows[i].Cells[0].Value);
+                    i++;
                 }
                 else
                 {
                     MessageBox.Show("Пользователь не зарегистрирован!");
                 }
-                db.closeConnection();//открываем соединение к бд
+
+            }
+            else
+            {
+                MessageBox.Show("Пользователь не зарегистрирован!");
+            }
+            db.closeConnection();//открываем соединение к бд
+
+            if (i == 4)
+            {
+                RusReady.Enabled = false;
+                MessageBox.Show("Спасибо за прохождение теста по русскому. Можете переходить к следующему тесту или закончить работу с программой.");
             }
         }
     }
