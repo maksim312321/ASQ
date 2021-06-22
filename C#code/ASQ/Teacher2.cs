@@ -36,12 +36,11 @@ namespace ASQ
             DB db = new DB();
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `results`", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("SELECT users.user_name, results.user_answer, question.question, question.correct_answer FROM `results`, `question`, `users`", db.GetConnection());
 
             adapter.SelectCommand = command;//выбираем команду           
             adapter.Fill(table);
             resultsTable.DataSource = table;//отображение данных
-
         }
     }
 }
