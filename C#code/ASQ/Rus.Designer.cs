@@ -99,7 +99,7 @@
             this.RusReady.Name = "RusReady";
             this.RusReady.Size = new System.Drawing.Size(100, 25);
             this.RusReady.TabIndex = 8;
-            this.RusReady.Text = "Закончить";
+            this.RusReady.Text = "Готово";
             this.RusReady.UseVisualStyleBackColor = true;
             this.RusReady.Click += new System.EventHandler(this.RusReady_Click);
             // 

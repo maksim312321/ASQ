@@ -30,9 +30,7 @@ namespace ASQ
         int quesId; //id текущего вопроса
         DB db = new DB();
         private void Math_Load(object sender, EventArgs e)
-        {
-            
-            
+        {  
             DataTable math = new DataTable();
             MySqlCommand command = new MySqlCommand("SELECT id,question FROM `question` WHERE id_subject = 1", db.GetConnection());
             MySqlDataAdapter adapter = new MySqlDataAdapter();
