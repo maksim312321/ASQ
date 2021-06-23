@@ -51,6 +51,7 @@ namespace ASQ
             // button
             // 
             this.button.BackColor = System.Drawing.Color.MediumOrchid;
+            this.button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button.Font = new System.Drawing.Font("Book Antiqua", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button.Location = new System.Drawing.Point(132, 165);
@@ -64,6 +65,7 @@ namespace ASQ
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.MediumOrchid;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Book Antiqua", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.Location = new System.Drawing.Point(132, 308);

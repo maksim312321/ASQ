@@ -55,7 +55,7 @@
             this.math.BackColor = System.Drawing.Color.MediumOrchid;
             this.math.Font = new System.Drawing.Font("Book Antiqua", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.math.ForeColor = System.Drawing.SystemColors.Control;
-            this.math.Location = new System.Drawing.Point(67, 53);
+            this.math.Location = new System.Drawing.Point(18, 53);
             this.math.Name = "math";
             this.math.Size = new System.Drawing.Size(170, 29);
             this.math.TabIndex = 3;
@@ -69,7 +69,7 @@
             this.rus.BackColor = System.Drawing.Color.MediumOrchid;
             this.rus.Font = new System.Drawing.Font("Book Antiqua", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rus.ForeColor = System.Drawing.SystemColors.Control;
-            this.rus.Location = new System.Drawing.Point(295, 53);
+            this.rus.Location = new System.Drawing.Point(243, 53);
             this.rus.Name = "rus";
             this.rus.Size = new System.Drawing.Size(163, 29);
             this.rus.TabIndex = 4;
@@ -83,7 +83,7 @@
             this.physics.BackColor = System.Drawing.Color.MediumOrchid;
             this.physics.Font = new System.Drawing.Font("Book Antiqua", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.physics.ForeColor = System.Drawing.SystemColors.Control;
-            this.physics.Location = new System.Drawing.Point(525, 53);
+            this.physics.Location = new System.Drawing.Point(470, 53);
             this.physics.Name = "physics";
             this.physics.Size = new System.Drawing.Size(105, 29);
             this.physics.TabIndex = 5;
@@ -94,9 +94,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.MediumOrchid;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Book Antiqua", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(200, 152);
+            this.button1.Location = new System.Drawing.Point(148, 142);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(333, 68);
             this.button1.TabIndex = 6;
@@ -120,6 +121,7 @@
             // buttonNameConf
             // 
             this.buttonNameConf.BackColor = System.Drawing.Color.MediumOrchid;
+            this.buttonNameConf.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonNameConf.Font = new System.Drawing.Font("Book Antiqua", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonNameConf.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonNameConf.Location = new System.Drawing.Point(657, 30);
@@ -137,9 +139,9 @@
             this.grouptest.Controls.Add(this.button1);
             this.grouptest.Controls.Add(this.physics);
             this.grouptest.ForeColor = System.Drawing.Color.White;
-            this.grouptest.Location = new System.Drawing.Point(120, 182);
+            this.grouptest.Location = new System.Drawing.Point(204, 182);
             this.grouptest.Name = "grouptest";
-            this.grouptest.Size = new System.Drawing.Size(708, 260);
+            this.grouptest.Size = new System.Drawing.Size(624, 260);
             this.grouptest.TabIndex = 9;
             this.grouptest.TabStop = false;
             this.grouptest.Text = "Тестирование";

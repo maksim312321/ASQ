@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rus));
             this.close = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.rusQuestion = new System.Windows.Forms.DataGridView();
             this.Question = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,24 +40,16 @@
             // 
             // close
             // 
-            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.close.Location = new System.Drawing.Point(325, 386);
+            this.close.BackColor = System.Drawing.Color.MediumOrchid;
+            this.close.Font = new System.Drawing.Font("Book Antiqua", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.close.ForeColor = System.Drawing.SystemColors.Control;
+            this.close.Location = new System.Drawing.Point(777, 418);
             this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(107, 25);
+            this.close.Size = new System.Drawing.Size(119, 32);
             this.close.TabIndex = 3;
             this.close.Text = "Закончить";
-            this.close.UseVisualStyleBackColor = true;
+            this.close.UseVisualStyleBackColor = false;
             this.close.Click += new System.EventHandler(this.close_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(339, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Тест";
             // 
             // rusQuestion
             // 
@@ -70,51 +62,59 @@
             // Question
             // 
             this.Question.AutoSize = true;
+            this.Question.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Question.Location = new System.Drawing.Point(12, 126);
             this.Question.Name = "Question";
-            this.Question.Size = new System.Drawing.Size(35, 13);
+            this.Question.Size = new System.Drawing.Size(68, 26);
             this.Question.TabIndex = 5;
             this.Question.Text = "label2";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(340, 309);
+            this.label2.BackColor = System.Drawing.Color.MediumOrchid;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label2.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(297, 340);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.Size = new System.Drawing.Size(94, 21);
             this.label2.TabIndex = 6;
             this.label2.Text = "Ваш ответ:";
             // 
             // RusInput
             // 
-            this.RusInput.Location = new System.Drawing.Point(408, 306);
+            this.RusInput.Location = new System.Drawing.Point(417, 340);
             this.RusInput.Name = "RusInput";
             this.RusInput.Size = new System.Drawing.Size(100, 20);
             this.RusInput.TabIndex = 7;
             // 
             // RusReady
             // 
-            this.RusReady.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RusReady.Location = new System.Drawing.Point(408, 332);
+            this.RusReady.BackColor = System.Drawing.Color.MediumOrchid;
+            this.RusReady.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RusReady.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RusReady.ForeColor = System.Drawing.SystemColors.Control;
+            this.RusReady.Location = new System.Drawing.Point(417, 378);
             this.RusReady.Name = "RusReady";
-            this.RusReady.Size = new System.Drawing.Size(100, 25);
+            this.RusReady.Size = new System.Drawing.Size(100, 36);
             this.RusReady.TabIndex = 8;
             this.RusReady.Text = "Готово";
-            this.RusReady.UseVisualStyleBackColor = true;
+            this.RusReady.UseVisualStyleBackColor = false;
             this.RusReady.Click += new System.EventHandler(this.RusReady_Click);
             // 
             // Rus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(908, 462);
             this.Controls.Add(this.RusReady);
             this.Controls.Add(this.RusInput);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Question);
             this.Controls.Add(this.rusQuestion);
             this.Controls.Add(this.close);
-            this.Controls.Add(this.label1);
             this.Name = "Rus";
             this.Text = "Rus";
             this.Load += new System.EventHandler(this.Rus_Load);
@@ -127,7 +127,6 @@
         #endregion
 
         private System.Windows.Forms.Button close;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView rusQuestion;
         private System.Windows.Forms.Label Question;
         private System.Windows.Forms.Label label2;

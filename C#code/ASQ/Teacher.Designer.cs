@@ -57,6 +57,7 @@
             // teacher_login
             // 
             this.teacher_login.BackColor = System.Drawing.Color.MediumOrchid;
+            this.teacher_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.teacher_login.Font = new System.Drawing.Font("Book Antiqua", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.teacher_login.ForeColor = System.Drawing.SystemColors.Control;
             this.teacher_login.Location = new System.Drawing.Point(98, 221);
