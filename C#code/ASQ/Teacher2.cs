@@ -24,7 +24,11 @@ namespace ASQ
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult ExitAnswer = MessageBox.Show("Вы действительно хотите закрыть программу?",
+                    "Завершение работы", MessageBoxButtons.YesNo);
+
+            if (ExitAnswer == DialogResult.Yes) //Если нажата “Да”
+                Application.Exit(); // Закрыть прогрпмму
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,6 +48,11 @@ namespace ASQ
             adapter.SelectCommand = command;//выбираем команду           
             adapter.Fill(table);
             resultsTable.DataSource = table;//отображение данных
+        }
+
+        private void resultsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

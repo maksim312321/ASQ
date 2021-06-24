@@ -29,7 +29,11 @@ namespace ASQ
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult ExitAnswer = MessageBox.Show("Вы действительно хотите закрыть программу?",
+                    "Завершение работы", MessageBoxButtons.YesNo);
+
+            if (ExitAnswer == DialogResult.Yes) //Если нажата “Да”
+                Application.Exit(); // Закрыть прогрпмму
         }
 
         private void Yt_Button2_Click(object sender, EventArgs e)

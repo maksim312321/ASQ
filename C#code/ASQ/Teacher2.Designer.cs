@@ -54,6 +54,7 @@
             this.resultsTable.Name = "resultsTable";
             this.resultsTable.Size = new System.Drawing.Size(869, 372);
             this.resultsTable.TabIndex = 5;
+            this.resultsTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.resultsTable_CellContentClick);
             // 
             // Teacher2
             // 
