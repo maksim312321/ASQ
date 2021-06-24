@@ -116,6 +116,7 @@
             this.Controls.Add(this.rusQuestion);
             this.Controls.Add(this.close);
             this.Name = "Rus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rus";
             this.Load += new System.EventHandler(this.Rus_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rusQuestion)).EndInit();

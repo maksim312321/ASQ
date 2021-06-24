@@ -116,6 +116,7 @@
             this.Controls.Add(this.MathInput);
             this.Controls.Add(this.close);
             this.Name = "Math";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Math";
             this.Load += new System.EventHandler(this.Math_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mathQuestion)).EndInit();

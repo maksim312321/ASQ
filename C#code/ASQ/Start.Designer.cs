@@ -87,6 +87,7 @@ namespace ASQ
             this.Controls.Add(this.button);
             this.Controls.Add(this.button3);
             this.Name = "Start";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

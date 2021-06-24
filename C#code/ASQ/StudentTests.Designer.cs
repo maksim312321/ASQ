@@ -158,6 +158,7 @@
             this.Controls.Add(this.name);
             this.Controls.Add(this.grouptest);
             this.Name = "StudentTests";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentTests";
             this.Load += new System.EventHandler(this.StudentTests_Load);
             this.grouptest.ResumeLayout(false);

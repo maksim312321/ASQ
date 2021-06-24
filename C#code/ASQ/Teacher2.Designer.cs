@@ -64,6 +64,7 @@
             this.Controls.Add(this.resultsTable);
             this.Controls.Add(this.button3);
             this.Name = "Teacher2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Teacher2";
             this.Load += new System.EventHandler(this.Teacher2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.resultsTable)).EndInit();

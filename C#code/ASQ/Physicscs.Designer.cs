@@ -116,6 +116,7 @@
             this.Controls.Add(this.physicscsQuestion);
             this.Controls.Add(this.close);
             this.Name = "Physicscs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Physicscs";
             this.Load += new System.EventHandler(this.Physicscs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.physicscsQuestion)).EndInit();
