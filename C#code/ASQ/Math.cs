@@ -23,7 +23,11 @@ namespace ASQ
 
         private void close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult ExitAnswer = MessageBox.Show("Вы действительно хотите закончить тестирование?",
+                    "Завершение теста", MessageBoxButtons.YesNo);
+
+            if (ExitAnswer == DialogResult.Yes) //Если нажата “Да”
+                this.Close(); // Закрыть окно
         }
 
         int i = 0;

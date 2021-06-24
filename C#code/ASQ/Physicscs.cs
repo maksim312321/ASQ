@@ -25,7 +25,11 @@ namespace ASQ
         DB db = new DB();
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult ExitAnswer = MessageBox.Show("Вы действительно хотите закончить тестирование?",
+                    "Завершение теста", MessageBoxButtons.YesNo);
+
+            if (ExitAnswer == DialogResult.Yes) //Если нажата “Да”
+                this.Close(); // Закрыть окно
         }
 
         private void Physicscs_Load(object sender, EventArgs e)
