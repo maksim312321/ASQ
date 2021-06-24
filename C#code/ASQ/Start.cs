@@ -54,14 +54,16 @@ namespace ASQ
 
         private void Button1_Click_1(object sender, EventArgs e)
         {
-            Teacher newForm = new Teacher();
+            Teacher newForm = new Teacher(this);
             newForm.Show();
+            this.Hide();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            StudentTests newForm = new StudentTests();
+            StudentTests newForm = new StudentTests(this);
             newForm.Show();
+            this.Hide();
         }
     }
 }

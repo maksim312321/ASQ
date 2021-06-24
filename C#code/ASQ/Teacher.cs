@@ -13,9 +13,11 @@ namespace ASQ
 {
     public partial class Teacher : Form
     {
-        public Teacher()
+        Start StartHide;
+        public Teacher(Start ForHide)
         {
             InitializeComponent();
+            StartHide = ForHide;
             this.FormClosing += Start.MainForm_FormClosing; // обработка выхода по крестику
         }
 
@@ -45,7 +47,7 @@ namespace ASQ
             {
                 Teacher2 results = new Teacher2();
                 results.Show();
-                this.Close();
+                this.Hide();
             }
             else
             {
@@ -55,7 +57,8 @@ namespace ASQ
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            StartHide.Show();
+            this.Hide();
         }
 
         private void Teacher_Load(object sender, EventArgs e)

@@ -14,10 +14,11 @@ namespace ASQ
 {
     public partial class Rus : Form
     {
-        
-        public Rus()
+        StudentTests StudentTestsHide;
+        public Rus(StudentTests ForHide)
         {
             InitializeComponent();
+            StudentTestsHide = ForHide;
             rusQuestion.Hide();
             Question.MaximumSize = new Size(800, 100);
             this.FormClosing += Start.MainForm_FormClosing; // обработка выхода по крестику
@@ -56,7 +57,10 @@ namespace ASQ
                     "Завершение теста", MessageBoxButtons.YesNo);
 
             if (ExitAnswer == DialogResult.Yes) //Если нажата “Да”
-                this.Close(); // Закрыть окно
+            {
+                StudentTestsHide.Show();
+                this.Hide();
+            }
         }
 
         private void RusReady_Click(object sender, EventArgs e)
