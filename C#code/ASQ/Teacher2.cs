@@ -24,10 +24,6 @@ namespace ASQ
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DialogResult ExitAnswer = MessageBox.Show("Вы действительно хотите закрыть программу?",
-                    "Завершение работы", MessageBoxButtons.YesNo);
-
-            if (ExitAnswer == DialogResult.Yes) //Если нажата “Да”
                 Application.Exit(); // Закрыть прогрпмму
         }
 
