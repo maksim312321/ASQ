@@ -62,10 +62,12 @@
             // Question
             // 
             this.Question.AutoSize = true;
-            this.Question.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Question.Location = new System.Drawing.Point(12, 126);
+            this.Question.BackColor = System.Drawing.Color.Transparent;
+            this.Question.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Bold);
+            this.Question.ForeColor = System.Drawing.Color.White;
+            this.Question.Location = new System.Drawing.Point(12, 164);
             this.Question.Name = "Question";
-            this.Question.Size = new System.Drawing.Size(68, 26);
+            this.Question.Size = new System.Drawing.Size(72, 26);
             this.Question.TabIndex = 5;
             this.Question.Text = "label2";
             // 

@@ -62,7 +62,9 @@
             // Question
             // 
             this.Question.AutoSize = true;
+            this.Question.BackColor = System.Drawing.Color.Transparent;
             this.Question.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Question.ForeColor = System.Drawing.Color.White;
             this.Question.Location = new System.Drawing.Point(35, 176);
             this.Question.Name = "Question";
             this.Question.Size = new System.Drawing.Size(72, 26);

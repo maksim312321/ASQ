@@ -18,7 +18,7 @@ namespace ASQ
         {
             InitializeComponent();
             mathQuestion.Hide();
-            Question.MaximumSize = new Size(800, 100);
+            Question1.MaximumSize = new Size(800, 100);
         }
 
         private void close_Click(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace ASQ
             if (math.Rows.Count > 0)//если нашли больше, чем 0 записей совпадающих, то пользователь авторизован
             {
                 mathQuestion.DataSource = math;
-                Question.Text = Convert.ToString(mathQuestion.Rows[i].Cells[1].Value);
+                Question1.Text = Convert.ToString(mathQuestion.Rows[i].Cells[1].Value);
                 quesId = Convert.ToInt32(mathQuestion.Rows[i].Cells[0].Value);
                 i++;
             }
@@ -74,7 +74,7 @@ namespace ASQ
                 if (math.Rows.Count > 0)//если нашли больше, чем 0 записей совпадающих, то пользователь авторизован
                 {
                     mathQuestion.DataSource = math;
-                    Question.Text = Convert.ToString(mathQuestion.Rows[i].Cells[1].Value);
+                    Question1.Text = Convert.ToString(mathQuestion.Rows[i].Cells[1].Value);
                     quesId = Convert.ToInt32(mathQuestion.Rows[i].Cells[0].Value);
                     i++;
                 }

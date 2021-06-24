@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Question = new System.Windows.Forms.Label();
             this.mathQuestion = new System.Windows.Forms.DataGridView();
+            this.Question1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mathQuestion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,12 +104,25 @@
             this.mathQuestion.Size = new System.Drawing.Size(10, 10);
             this.mathQuestion.TabIndex = 7;
             // 
+            // Question1
+            // 
+            this.Question1.AutoSize = true;
+            this.Question1.BackColor = System.Drawing.Color.Transparent;
+            this.Question1.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Bold);
+            this.Question1.ForeColor = System.Drawing.Color.White;
+            this.Question1.Location = new System.Drawing.Point(33, 188);
+            this.Question1.Name = "Question1";
+            this.Question1.Size = new System.Drawing.Size(72, 26);
+            this.Question1.TabIndex = 8;
+            this.Question1.Text = "label2";
+            // 
             // Math
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(921, 491);
+            this.Controls.Add(this.Question1);
             this.Controls.Add(this.mathQuestion);
             this.Controls.Add(this.Question);
             this.Controls.Add(this.label2);
@@ -133,5 +147,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Question;
         private System.Windows.Forms.DataGridView mathQuestion;
+        private System.Windows.Forms.Label Question1;
     }
 }
