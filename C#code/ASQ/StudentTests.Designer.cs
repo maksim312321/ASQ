@@ -157,6 +157,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.name);
             this.Controls.Add(this.grouptest);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "StudentTests";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentTests";

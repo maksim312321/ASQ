@@ -91,6 +91,7 @@
             this.Controls.Add(this.teacher_login);
             this.Controls.Add(this.passField);
             this.Controls.Add(this.loginField);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Teacher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";

@@ -115,6 +115,7 @@
             this.Controls.Add(this.Question);
             this.Controls.Add(this.rusQuestion);
             this.Controls.Add(this.close);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Rus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rus";

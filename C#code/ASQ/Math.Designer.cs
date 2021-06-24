@@ -115,6 +115,7 @@
             this.Controls.Add(this.MathReady);
             this.Controls.Add(this.MathInput);
             this.Controls.Add(this.close);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Math";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Math";

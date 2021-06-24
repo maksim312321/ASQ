@@ -63,6 +63,7 @@
             this.ClientSize = new System.Drawing.Size(893, 560);
             this.Controls.Add(this.resultsTable);
             this.Controls.Add(this.button3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Teacher2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Teacher2";

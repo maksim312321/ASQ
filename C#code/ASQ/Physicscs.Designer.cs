@@ -115,6 +115,7 @@
             this.Controls.Add(this.Question);
             this.Controls.Add(this.physicscsQuestion);
             this.Controls.Add(this.close);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Physicscs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Physicscs";
