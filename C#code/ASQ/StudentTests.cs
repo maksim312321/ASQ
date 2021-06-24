@@ -19,6 +19,7 @@ namespace ASQ
             InitializeComponent();
             grouptest.BackColor = Color.Transparent;
             grouptest.Enabled = false;
+            this.FormClosing += Start.MainForm_FormClosing; // обработка выхода по крестику
 
         }
         public static int id;//idтекущего пользователя

@@ -18,6 +18,7 @@ namespace ASQ
             InitializeComponent();
             physicscsQuestion.Hide();
             Question.MaximumSize = new Size(800, 100);
+            this.FormClosing += Start.MainForm_FormClosing; // обработка выхода по крестику
         }
 
         int i = 0;

@@ -15,6 +15,21 @@ namespace ASQ
         public Start()
         {
             InitializeComponent();
+            this.FormClosing += MainForm_FormClosing;
+        }
+
+        public static void MainForm_FormClosing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            DialogResult ExitAnswer = MessageBox.Show("Вы действительно хотите закрыть программу?",
+                    "Завершение работы", MessageBoxButtons.YesNo);
+
+            if (ExitAnswer == DialogResult.Yes) //Если нажата “Да”
+            {
+                //e.Cancel = false;
+                Application.ExitThread(); // Закрыть прогрпмму
+            }
+            else if (ExitAnswer == DialogResult.No) //Если нажата “Нет”
+                e.Cancel = true; // кнопка больше не закрывает форму
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,11 +44,7 @@ namespace ASQ
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            DialogResult ExitAnswer = MessageBox.Show("Вы действительно хотите закрыть программу?",
-                    "Завершение работы", MessageBoxButtons.YesNo);
-
-            if (ExitAnswer == DialogResult.Yes) //Если нажата “Да”
-                Application.Exit(); // Закрыть прогрпмму
+            Application.Exit(); // Закрыть прогрпмму
         }
 
         private void Yt_Button2_Click(object sender, EventArgs e)

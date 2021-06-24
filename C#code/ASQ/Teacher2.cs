@@ -19,7 +19,7 @@ namespace ASQ
             InitializeComponent();
             resultsTable.ReadOnly = true;
             resultsTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+            this.FormClosing += Start.MainForm_FormClosing; // обработка выхода по крестику
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -19,6 +19,7 @@ namespace ASQ
             InitializeComponent();
             mathQuestion.Hide();
             Question1.MaximumSize = new Size(800, 100);
+            this.FormClosing += Start.MainForm_FormClosing; // обработка выхода по крестику
         }
 
         private void close_Click(object sender, EventArgs e)

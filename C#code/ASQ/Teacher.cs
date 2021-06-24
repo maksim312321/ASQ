@@ -16,6 +16,7 @@ namespace ASQ
         public Teacher()
         {
             InitializeComponent();
+            this.FormClosing += Start.MainForm_FormClosing; // обработка выхода по крестику
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

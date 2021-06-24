@@ -20,6 +20,7 @@ namespace ASQ
             InitializeComponent();
             rusQuestion.Hide();
             Question.MaximumSize = new Size(800, 100);
+            this.FormClosing += Start.MainForm_FormClosing; // обработка выхода по крестику
         }
 
         int i = 0;
@@ -101,6 +102,11 @@ namespace ASQ
                 RusReady.Enabled = false;
                 MessageBox.Show("Спасибо за прохождение теста по русскому. Можете переходить к следующему тесту или закончить работу с программой.");
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

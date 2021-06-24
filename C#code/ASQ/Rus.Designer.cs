@@ -83,6 +83,7 @@
             this.label2.Size = new System.Drawing.Size(94, 21);
             this.label2.TabIndex = 6;
             this.label2.Text = "Ваш ответ:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // RusInput
             // 
