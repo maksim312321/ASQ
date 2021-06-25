@@ -27,8 +27,22 @@ namespace ASQ
         public static int id;//idтекущего пользователя
         private void Button3_Click(object sender, EventArgs e)
         {
-            StartHide.Show();
-            this.Hide();
+            if (name.Text != "")
+            {
+                DialogResult ExitAnswer = MessageBox.Show("Вы действительно хотите вернуться?",
+                    "Завершение работы", MessageBoxButtons.YesNo);
+
+                if (ExitAnswer == DialogResult.Yes) //Если нажата “Да”
+                {
+                    StartHide.Show();
+                    this.Hide();
+                }
+            }
+            else
+            {
+                StartHide.Show();
+                this.Hide();
+            }
         }
 
         private void StudentTests_Load(object sender, EventArgs e)
