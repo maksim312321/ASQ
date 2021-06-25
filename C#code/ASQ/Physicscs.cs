@@ -108,6 +108,8 @@ namespace ASQ
             {
                 PhysicscsReady.Enabled = false;
                 MessageBox.Show("Спасибо за прохождение теста по физике. Можете переходить к следующему тесту или закончить работу с программой.");
+                StudentTestsHide.Show();
+                this.Hide();
             }
         }
     }

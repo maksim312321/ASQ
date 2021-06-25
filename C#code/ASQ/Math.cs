@@ -104,6 +104,8 @@ namespace ASQ
             {
                 MathReady.Enabled = false;
                 MessageBox.Show("Спасибо за прохождение теста по математике. Можете переходить к следующему тесту или закончить работу с программой.");
+                StudentTestsHide.Show();
+                this.Hide();
             }
         }
 
