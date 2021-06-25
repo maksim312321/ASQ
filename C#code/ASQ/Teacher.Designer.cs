@@ -51,6 +51,7 @@
             this.passField.Location = new System.Drawing.Point(134, 160);
             this.passField.Multiline = true;
             this.passField.Name = "passField";
+            this.passField.PasswordChar = '*';
             this.passField.Size = new System.Drawing.Size(173, 30);
             this.passField.TabIndex = 3;
             // 
