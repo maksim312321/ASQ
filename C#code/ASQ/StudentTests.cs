@@ -14,17 +14,35 @@ namespace ASQ
 {
     public partial class StudentTests : Form
     {
-        public StudentTests()
+        Start StartHide;
+        public StudentTests(Start ForHide)
         {
             InitializeComponent();
+            StartHide = ForHide;
             grouptest.BackColor = Color.Transparent;
             grouptest.Enabled = false;
+            this.FormClosing += Start.MainForm_FormClosing; // обработка выхода по крестику
 
         }
         public static int id;//idтекущего пользователя
         private void Button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (name.Text != "")
+            {
+                DialogResult ExitAnswer = MessageBox.Show("Вы действительно хотите вернуться?",
+                    "Завершение работы", MessageBoxButtons.YesNo);
+
+                if (ExitAnswer == DialogResult.Yes) //Если нажата “Да”
+                {
+                    StartHide.Show();
+                    this.Hide();
+                }
+            }
+            else
+            {
+                StartHide.Show();
+                this.Hide();
+            }
         }
 
         private void StudentTests_Load(object sender, EventArgs e)
@@ -94,8 +112,9 @@ namespace ASQ
                 if (mathPassed == false)
                 {
                     mathPassed = true;
-                    Math math = new Math();
+                    Math math = new Math(this);
                     math.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -107,8 +126,9 @@ namespace ASQ
                 if (rusPassed == false)
                 {
                     rusPassed = true;
-                    Rus rus = new Rus();
+                    Rus rus = new Rus(this);
                     rus.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -120,8 +140,9 @@ namespace ASQ
                 if (physicsPassed == false)
                 {
                     physicsPassed = true;
-                    Physicscs physicscs = new Physicscs();
+                    Physicscs physicscs = new Physicscs(this);
                     physicscs.Show();
+                    this.Hide();
                 }
                 else
                 {

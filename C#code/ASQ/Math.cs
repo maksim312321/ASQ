@@ -14,16 +14,26 @@ namespace ASQ
 {
     public partial class Math : Form
     {
-        public Math()
+        StudentTests StudentTestsHide;
+        public Math(StudentTests ForHide)
         {
             InitializeComponent();
+            StudentTestsHide = ForHide;
             mathQuestion.Hide();
             Question1.MaximumSize = new Size(800, 100);
+            this.FormClosing += Start.MainForm_FormClosing; // обработка выхода по крестику
         }
 
         private void close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult ExitAnswer = MessageBox.Show("Вы действительно хотите закончить тестирование?",
+                    "Завершение теста", MessageBoxButtons.YesNo);
+
+            if (ExitAnswer == DialogResult.Yes) //Если нажата “Да”
+            {
+                StudentTestsHide.Show();
+                this.Hide();
+            }
         }
 
         int i = 0;
@@ -94,6 +104,8 @@ namespace ASQ
             {
                 MathReady.Enabled = false;
                 MessageBox.Show("Спасибо за прохождение теста по математике. Можете переходить к следующему тесту или закончить работу с программой.");
+                StudentTestsHide.Show();
+                this.Hide();
             }
         }
 

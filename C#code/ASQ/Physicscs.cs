@@ -13,11 +13,14 @@ namespace ASQ
 {
     public partial class Physicscs : Form
     {
-        public Physicscs()
+        StudentTests StudentTestsHide;
+        public Physicscs(StudentTests ForHide)
         {
             InitializeComponent();
+            StudentTestsHide = ForHide;
             physicscsQuestion.Hide();
             Question.MaximumSize = new Size(800, 100);
+            this.FormClosing += Start.MainForm_FormClosing; // обработка выхода по крестику
         }
 
         int i = 0;
@@ -25,7 +28,14 @@ namespace ASQ
         DB db = new DB();
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult ExitAnswer = MessageBox.Show("Вы действительно хотите закончить тестирование?",
+                    "Завершение теста", MessageBoxButtons.YesNo);
+
+            if (ExitAnswer == DialogResult.Yes) //Если нажата “Да”
+            {
+                StudentTestsHide.Show();
+                this.Hide();
+            }
         }
 
         private void Physicscs_Load(object sender, EventArgs e)
@@ -98,6 +108,8 @@ namespace ASQ
             {
                 PhysicscsReady.Enabled = false;
                 MessageBox.Show("Спасибо за прохождение теста по физике. Можете переходить к следующему тесту или закончить работу с программой.");
+                StudentTestsHide.Show();
+                this.Hide();
             }
         }
     }

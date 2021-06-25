@@ -14,12 +14,14 @@ namespace ASQ
 {
     public partial class Rus : Form
     {
-        
-        public Rus()
+        StudentTests StudentTestsHide;
+        public Rus(StudentTests ForHide)
         {
             InitializeComponent();
+            StudentTestsHide = ForHide;
             rusQuestion.Hide();
             Question.MaximumSize = new Size(800, 100);
+            this.FormClosing += Start.MainForm_FormClosing; // обработка выхода по крестику
         }
 
         int i = 0;
@@ -51,7 +53,14 @@ namespace ASQ
 
         private void close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult ExitAnswer = MessageBox.Show("Вы действительно хотите закончить тестирование?",
+                    "Завершение теста", MessageBoxButtons.YesNo);
+
+            if (ExitAnswer == DialogResult.Yes) //Если нажата “Да”
+            {
+                StudentTestsHide.Show();
+                this.Hide();
+            }
         }
 
         private void RusReady_Click(object sender, EventArgs e)
@@ -96,7 +105,14 @@ namespace ASQ
             {
                 RusReady.Enabled = false;
                 MessageBox.Show("Спасибо за прохождение теста по русскому. Можете переходить к следующему тесту или закончить работу с программой.");
+                StudentTestsHide.Show();
+                this.Hide();
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
