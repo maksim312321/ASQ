@@ -388,3 +388,6 @@ FodyWeavers.xsd
 # JetBrains Rider
 .idea/
 *.sln.iml
+C#code/ASQ/.vs/ASQ/v15/.suo
+C#code/ASQ/.vs/ASQ/v15/Server/sqlite3/storage.ide
+C#code/ASQ/.vs/ASQ/v15/Server/sqlite3/storage.ide-wal
